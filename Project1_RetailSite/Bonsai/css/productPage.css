@@ -1,0 +1,143 @@
+body    {
+    background-color: rgb(151, 146, 146);
+    color: white;
+    font-family: 'Hind', sans-serif;
+}
+
+/*Buttons*/
+.button--primary  {
+    color: rgb(65, 63, 63);
+    background-color: white;
+    text-align: left;
+    padding: 0.2rem 0.8rem;
+    margin-top: 0.5rem;
+    transition: 0.3s;
+    text-align: center;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: rgb(114, 111, 111);
+}
+  
+.button--primary:hover  {
+    background-color: rgb(151, 146, 146);
+    color: white;
+    border-color: white;
+}
+
+/*Reworked NavBar for transparent Mobile View*/
+@media (max-width: 767px){
+    #navbar {
+        background: linear-gradient(to bottom, rgb(151, 146, 146) 0%, rgba(151, 146, 146, 0) 100%);
+      }
+    #nav-item   {
+        text-shadow: 2px 2px 2px #464545;
+    }
+    #navHamburger  {
+        filter: drop-shadow(3px 3px 2px #222121);
+    }
+    #navBasket  {
+        filter: drop-shadow(3px 3px 2px #222121);
+    }
+}
+
+
+
+/*Product Page*/
+
+.productPageIntro  {
+    padding: 0;
+    font-weight: 300;
+}
+
+.productPageIntro  h1  {
+    text-align: left;
+    border-bottom-color: rgb(201, 198, 198);
+    border-bottom-width: 1px; 
+    border-bottom-style: solid;
+    padding-bottom: 1%;
+}
+
+.pageContainer   {
+    padding-top: 1.5rem;
+    position: fixed;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.productCard    {
+    background-color: rgb(151, 146, 146);
+    padding: 5% 5% 0%;
+    box-shadow:none;
+}
+@media (max-width: 767px){
+    .productCard    {
+        height: auto;
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+        margin-top: -5%;}
+}
+
+.card-img   {
+    border-radius: 0%;
+    height: 38em;
+    width: 100%;
+    object-fit: cover;
+}
+@media (max-width: 1200px){
+    .card-img   {
+        height: 33em;}
+}
+@media (max-width: 767px){
+    .card-img   {
+        height: 50vh;
+        width: 100%;}
+}
+
+.productInfo    {
+    padding-left: 0;
+    padding-right: 10%;
+    height: 80vh;
+}@media (max-width: 1200px){
+    .productInfo   {
+        padding-right: 0%;}
+}
+
+
+.productImage   {
+    padding: 0;
+    overflow: hidden;
+}
+
+.productDescription {
+    padding-top: 10%;
+}
+@media (max-width: 767px){
+    .productDescription   {
+        padding-top: 5%;}
+}
+
+.productSelection h5  {
+    width: 100%; 
+    margin-top: 8%; 
+    margin-bottom: 3%;
+    text-align: center;  
+}
+
+.form-group {
+    padding: 1% 0%;
+}
+
+.checkout   {
+    padding-top: 3%;
+}
+
+#quantityInput  {
+    width: 10%;
+    display: inline;
+    margin-right: 5%;
+}
+
+#cartButton {
+    width: 100%;
+}
+

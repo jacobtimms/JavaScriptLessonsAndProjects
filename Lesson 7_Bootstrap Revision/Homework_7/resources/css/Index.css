@@ -1,0 +1,33 @@
+body {
+    background-color:lightgray
+}
+
+.card-img {
+    object-fit: cover;
+}
+.card {
+    overflow: hidden;
+    width: 160vh;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  visibility: visible !important;
+}
+  
+@keyframes fadeIn {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+  
+.to-fade-in {
+  opacity: 0;
+}
+

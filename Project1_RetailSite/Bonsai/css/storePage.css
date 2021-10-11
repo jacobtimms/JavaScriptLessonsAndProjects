@@ -1,0 +1,99 @@
+
+body{
+    background-color: rgb(151, 146, 146);
+    color: white;
+    font-family: 'Hind', sans-serif;
+}
+
+*/Store Page*/
+
+.container-fluid    {
+    position: fixed;
+}
+
+.col-sm {
+  padding-left: 15%;
+  white-space: nowrap;
+}
+
+#storePageIntro  {
+    color: white;
+    font-family: 'Hind', sans-serif;
+    padding: 5% 20% 3% 15% ;
+    font-weight: 300;
+}
+@media (max-width: 767px){
+    #storePageIntro   {
+        padding-top: 6rem;}
+}
+
+#storePageIntro  h1  {
+    text-align: center;
+    border-bottom-color: rgb(201, 198, 198);
+    border-bottom-width: 1px; 
+    border-bottom-style: solid;
+    padding-bottom: 1%;
+}
+
+#storePageIntro  p  {
+    text-align: center;
+    padding-top: 1%;
+}
+
+.productCard{
+    display: inline;
+    width: 32%;
+    background-color: transparent;
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+    box-shadow: none;
+    padding: 0;
+}
+@media (max-width: 767px){
+    .productCard   {
+        width: 100%;}
+}
+.productCard .card-body{
+    padding: 0;
+}
+
+.productCard img  {
+    height: auto;
+    width: 100%;
+    padding: 2% 0;
+    object-fit: cover;
+}
+
+.productCard p {
+    color: white;
+    text-transform: uppercase;
+}
+
+.productRow {
+    width: 80%;
+    margin: 0;
+    padding-bottom: 1%;
+}
+
+.img-centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px #464545;
+    opacity: 0;
+    pointer-events: none
+}
+
+.productCard:hover img  {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.productCard:hover .img-centered-text {
+    opacity: 1;
+    transition: 0.3s;
+}

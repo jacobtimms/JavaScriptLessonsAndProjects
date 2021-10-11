@@ -1,0 +1,87 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  float: right;
+  margin-right: 1rem;
+  margin-top: 4rem;
+  padding: 0px;
+  border: 1px solid #888;
+  width: 30rem;
+  height: 85%;
+}
+.modal-content h5 {
+  color: black;
+  text-align: center;
+  padding: 1rem;
+}
+.total {
+  color: black;
+  text-align: left;
+  padding: 2.3rem 0rem;
+  margin: 0rem 1.5rem;
+  border-top:rgb(167, 158, 158);
+  border-top-style: solid;
+  border-top-width: 0.1rem;
+}
+
+.basketHeadings   {
+  color: black;
+  text-align: left;
+  margin: 0rem 1.5rem;
+  border-bottom:rgb(167, 158, 158);
+  border-bottom-style: solid;
+  border-bottom-width: 0.1rem;
+}
+
+.basketItem  {
+  color: rgb(77, 72, 72);
+  text-align: left;
+  padding: 0.5rem 0rem;
+  margin-left: 1.5rem;
+  width: 90%;
+  border-bottom:rgb(167, 158, 158);
+  border-bottom-style: solid;
+  border-bottom-width: 0.1rem;
+}
+.itemBasketImg    {
+  height: 5rem;
+  border-radius: 10px;
+}
+
+.modal-content .button--primary {
+  width: 80%;
+  margin-left: 10%;
+}
+
+/*Buttons*/
+.button--primary  {
+  color: rgb(65, 63, 63);
+  background-color: white;
+  text-align: left;
+  padding: 0.2rem 0.8rem;
+  margin-top: 0.5rem;
+  transition: 0.3s;
+  text-align: center;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: rgb(114, 111, 111);
+  z-index: 100;
+}
+
+.button--primary:hover  {
+background-color: rgb(151, 146, 146);
+color: white;
+border-color: white;
+}

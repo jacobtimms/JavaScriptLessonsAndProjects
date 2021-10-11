@@ -1,0 +1,97 @@
+/* NavBar */
+#navbar {
+  background: linear-gradient(to bottom, rgb(151, 146, 146) 0%, rgba(151, 146, 146, 0) 100%);
+  z-index: 99;
+  box-shadow: none;
+  width: 100vw;
+  position: fixed;
+}
+@media (max-width: 767px){
+#navbar {
+  height: 4rem;
+  text-align: center;
+  background-color: rgb(151, 146, 146);}
+}
+
+#navHamburger   {
+    height: 1rem;
+    padding-left: 2rem;
+    margin-top: 0rem;
+    display: inline;
+    padding-right: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+@media (max-width: 767px){
+  #navHamburger {
+    padding-left: 1.5rem;
+    float: left;
+    margin-top: 2rem;
+    padding: 0;
+    margin-left: 2rem;}
+}
+
+#navBasket   {
+    height: 1.5rem;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+    float:right;
+    display: inline;
+}
+
+#nav-item {
+    color: white;
+    font-size: 1.3rem;
+    padding: 1.5rem 0rem 0rem 1.5rem;
+    letter-spacing: 1.1rem;
+}
+@media (max-width: 767px){
+  #nav-item {
+    padding-top: 1.5rem;
+    padding-left: 0;
+    font-weight: 200;}
+}
+
+/* SideNav menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* SideNav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 0;
+}
