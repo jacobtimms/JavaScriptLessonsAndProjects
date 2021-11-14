@@ -61,18 +61,20 @@ const bonsaiCareProducts = [
 let searchParams = new URLSearchParams(window.location.search)
 let UrlId = searchParams.get('id')
 
-//Sets page ID as variable
-storePage = eval(UrlId);
-
-/*FILL PRDUCT PAGE CATEGORY HTML*/
+/*FILL PRODUCT PAGE CATEGORY HTML*/
 //Assigns storePage variable/category based on page URL ID
-if (storePage === outdoorBonsaiProducts) {
+//Sets page ID as variable
+if (UrlId === 'outdoorBonsaiProducts') {
     store = 0;
-} else if (storePage === indoorBonsaiProducts) {
+    storePage = outdoorBonsaiProducts;
+} else if (UrlId === 'indoorBonsaiProducts') {
     store = 1;
-} else if (storePage === bonsaiCareProducts) {
+    storePage = indoorBonsaiProducts;
+} else if (UrlId === 'bonsaiCareProducts') {
     store = 2;
+    storePage = bonsaiCareProducts;
 }
+
 //Fills the page HTML using the approriate category data
 fillStorePageHTML();
 function fillStorePageHTML() {
