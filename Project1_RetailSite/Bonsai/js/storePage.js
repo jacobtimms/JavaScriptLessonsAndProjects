@@ -58,29 +58,29 @@ const bonsaiCareProducts = [
 
 /*GET PAGE ID*/
 //Fetches page ID from URL
-let searchParams = new URLSearchParams(window.location.search)
-let UrlId = searchParams.get('id')
+let searchParams = new URLSearchParams(window.location.search);
+let UrlId = searchParams.get('id');
 
 /*FILL PRODUCT PAGE CATEGORY HTML*/
 //Assigns storePage variable/category based on page URL ID
 //Sets page ID as variable
 if (UrlId === 'outdoorBonsaiProducts') {
-    store = 0;
     storePage = outdoorBonsaiProducts;
+    storeDisplay = storePageData[0];
 } else if (UrlId === 'indoorBonsaiProducts') {
-    store = 1;
     storePage = indoorBonsaiProducts;
+    storeDisplay = storePageData[1];
 } else if (UrlId === 'bonsaiCareProducts') {
-    store = 2;
     storePage = bonsaiCareProducts;
+    storeDisplay = storePageData[2];
 }
 
 //Fills the page HTML using the approriate category data
 fillStorePageHTML();
 function fillStorePageHTML() {
-    document.getElementById("storePageTabTitle").innerText = storePageData[store].storePageTitle;
-    document.getElementById("storePageTitle").innerText = storePageData[store].storePageTitle;
-    document.getElementById("storePageDescription").innerText = storePageData[store].storePageDescription;
+    document.getElementById("storePageTabTitle").innerText = storeDisplay.storePageTitle;
+    document.getElementById("storePageTitle").innerText = storeDisplay.storePageTitle;
+    document.getElementById("storePageDescription").innerText = storeDisplay.storePageDescription;
 };
 
 /*FETCH PRODUCT DATA & CREATE PRODUCT CARDS*/
