@@ -1,0 +1,1 @@
+A collection of small projects to get familiar with VueJS functionality, such as using components to build a Twitter clone.

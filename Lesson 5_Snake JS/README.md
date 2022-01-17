@@ -1,0 +1,1 @@
+Created a 'Snake' game using Javascript, to become more familiar with it.

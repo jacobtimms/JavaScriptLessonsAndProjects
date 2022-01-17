@@ -1,0 +1,1 @@
+A task focused on Javascript functions, to become familiar working with Arrays and data.

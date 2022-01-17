@@ -1,0 +1,1 @@
+Re-implemented the Bonsai Site into Vue to demonstrate knowledge of the framework and it's tools, such as components, Vue Router and conditional rendering.

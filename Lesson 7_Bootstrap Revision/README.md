@@ -1,0 +1,1 @@
+Revised and expanded on Bootstrap functionality.
