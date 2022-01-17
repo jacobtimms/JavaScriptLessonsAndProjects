@@ -44,7 +44,6 @@ export default {
 </script>
 
 <style scoped>
-
 .img-centered-text {
   position: absolute;
   top: 50%;

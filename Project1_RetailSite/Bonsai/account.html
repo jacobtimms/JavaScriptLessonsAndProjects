@@ -1,128 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Account</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
-    <!--Google Fonts Hind-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="./css/navbar.css" type="text/css">
-    <link rel="stylesheet" href="./css/basket.css" type="text/css">
-    <link rel="stylesheet" href="./css/account.css" type="text/css">
-  </head>
-  <body onload="fetchSessionData()">
-    <!-- SideNav-->
-    <div id="mySidenav" class="sidenav">
-        <a href="./account.html">Account</a>
-        <a href="./storePage.html?id=outdoorBonsaiProducts">Outdoor Bonasi</a>
-        <a href="./storePage.html?id=indoorBonsaiProducts">Indoor Bonsai</a>
-        <a href="./storePage.html?id=bonsaiCareProducts">Bonsai Care</a>
-        <a href="./contact.html">Contact</a>
-    </div>
-    <!--Shopping Basket (Modal)-->
-    <div id="itemBasket" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <h5>Shopping Basket</h5>
-        <div class="row basketHeadings" style="width: auto;">
-          <div class="col-sm-7">
-            <h6>Item</h6>
-          </div>
-          <div class="col-sm-3">
-            <h6>Price</h6>
-          </div>
-          <div class="col-sm-2">
-            <h6>Quantity</h6>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Account</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!--Google Fonts Hind-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./css/navbar.css" type="text/css">
+  <link rel="stylesheet" href="./css/basket.css" type="text/css">
+  <link rel="stylesheet" href="./css/account.css" type="text/css">
+</head>
+
+<body onload="fetchSessionData()">
+  <!-- SideNav-->
+  <div id="mySidenav" class="sidenav">
+    <a href="./account.html">Account</a>
+    <a href="./storePage.html?id=outdoorBonsaiProducts">Outdoor Bonasi</a>
+    <a href="./storePage.html?id=indoorBonsaiProducts">Indoor Bonsai</a>
+    <a href="./storePage.html?id=bonsaiCareProducts">Bonsai Care</a>
+    <a href="./contact.html">Contact</a>
+  </div>
+  <!--Shopping Basket (Modal)-->
+  <div id="itemBasket" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <h5>Shopping Basket</h5>
+      <div class="row basketHeadings" style="width: auto;">
+        <div class="col-sm-7">
+          <h6>Item</h6>
         </div>
-        <div class="container" style="overflow-y: scroll;">
-          <div class="row" id="basketItems"></div>
+        <div class="col-sm-3">
+          <h6>Price</h6>
         </div>
-        <h6 class="total" id="total">Total: £0.00</h6>
-        <button id="updateBasketBtn" class="button--primary">Update Basket</button>
-        <button id="placeOrderBtn" class="button--primary">Place Order</button>
-      </div>
-    </div>
-
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-    <div id="main">
-      <!-- Navbar-->
-      <header class="header" id="navbar">
-        <img onclick="toggleNav()" src="./img/NavBar/menuWhite.png" id="navHamburger" role="button" style="display:inline-block;">
-        <a class="nav-link" href="./index.html" id="nav-item" style="display:inline-block">BONSAI</a>
-        <img src="img/NavBar/basket.jpeg" id="navBasket" role="button" style="display:inline-block;">
-      </header>
-      <!--Login Form-->
-      <div class="container-fluid">
-        <div class="row" id="loginForm">
-            <div id="border-line" class="col-md-6" style="text-align: center;">
-              <div style="display: inline-block; text-align: left;">
-                <h1>Login</h1>
-                <form id="customer_login" name="customer_login">
-                    <label for="customer_email">Email:</label>
-                    <input type="email" id="customer_email" name="customer_email">
-
-                    <label for="customer_password">Password:</label>
-                    <input type="password" id="customer_password" name="customer_password">
-                        <a id="forgotPw" href="#"><label for="customer_password">Forgot your password?</label></a>
-                    <button type="submit" class="button button--primary button--submit" onclick="validateForm1()">Sign In</button>
-                </form>
-                <p class="or">────── OR ───────</p>
-              </div>
-            </div>
-            <div class="col-md-6" style="text-align: center;">
-              <div style="display: inline-block; text-align: left;">
-                <h1>Create Account</h1>
-                <form id="create_customer" name="create_customer">
-        
-                    <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="first_name">
-
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name">
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password">
-
-                    <div id="accepts_marketing" class="checkbox">
-                        <label for="marketing">SIGN UP FOR OUR NEWSLETTER:
-                        <input class="radio-inline" type="checkbox" name="customer[accepts_marketing]" checked="checked" value="true" id="marketing" style="margin-left: 0.1rem;">
-                        </label>
-                    </div>
-                    <button type="submit" class="button button--primary button--submit" onclick="validateForm2()">Create</button>
-                </form>
-              </div>
-            </div>
+        <div class="col-sm-2">
+          <h6>Quantity</h6>
         </div>
       </div>
+      <div class="container" style="overflow-y: scroll;">
+        <div class="row" id="basketItems"></div>
+      </div>
+      <h6 class="total" id="total">Total: £0.00</h6>
+      <button id="updateBasketBtn" class="button--primary">Update Basket</button>
+      <button id="placeOrderBtn" class="button--primary">Place Order</button>
+    </div>
+  </div>
+
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+    <!-- Navbar-->
+    <header class="header" id="navbar">
+      <img onclick="toggleNav()" src="./img/NavBar/menuWhite.png" id="navHamburger" role="button"
+        style="display:inline-block;">
+      <a class="nav-link" href="./index.html" id="nav-item" style="display:inline-block">BONSAI</a>
+      <img src="img/NavBar/basket.jpeg" id="navBasket" role="button" style="display:inline-block;">
+    </header>
+    <!--Login Form-->
+    <div class="container-fluid">
+      <div class="row" id="loginForm">
+        <div id="border-line" class="col-md-6" style="text-align: center;">
+          <div style="display: inline-block; text-align: left;">
+            <h1>Login</h1>
+            <form id="customer_login" name="customer_login">
+              <label for="customer_email">Email:</label>
+              <input type="email" id="customer_email" name="customer_email">
+
+              <label for="customer_password">Password:</label>
+              <input type="password" id="customer_password" name="customer_password">
+              <a id="forgotPw" href="#"><label for="customer_password">Forgot your password?</label></a>
+              <button type="submit" class="button button--primary button--submit" onclick="validateForm1()">Sign
+                In</button>
+            </form>
+            <p class="or">────── OR ───────</p>
+          </div>
+        </div>
+        <div class="col-md-6" style="text-align: center;">
+          <div style="display: inline-block; text-align: left;">
+            <h1>Create Account</h1>
+            <form id="create_customer" name="create_customer">
+
+              <label for="first_name">First Name:</label>
+              <input type="text" id="first_name" name="first_name">
+
+              <label for="last_name">Last Name:</label>
+              <input type="text" id="last_name" name="last_name">
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password">
+
+              <div id="accepts_marketing" class="checkbox">
+                <label for="marketing">SIGN UP FOR OUR NEWSLETTER:
+                  <input class="radio-inline" type="checkbox" name="customer[accepts_marketing]" checked="checked"
+                    value="true" id="marketing" style="margin-left: 0.1rem;">
+                </label>
+              </div>
+              <button type="submit" class="button button--primary button--submit"
+                onclick="validateForm2()">Create</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Main div close-->
 </body>
-  <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- MDB -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
 
-  <!-- Axios -->
+<!-- Axios -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-  <!-- Custom scripts -->
-  <script type="text/javascript" src="./js/navbar.js"></script>
-  <script type="text/javascript" src="./js/account.js"></script>
-  <script type="text/javascript" src="./js/basket.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript" src="./js/navbar.js"></script>
+<script type="text/javascript" src="./js/account.js"></script>
+<script type="text/javascript" src="./js/basket.js"></script>
+
 </html>
-
-

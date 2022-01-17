@@ -39,49 +39,48 @@
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <style scoped>
-body{
-    background-color: rgb(151, 146, 146);
+body {
+  background-color: rgb(151, 146, 146);
 }
 
-.container-fluid  {
-    position: fixed;
-    height: 100vh;
-    overflow-y: auto;
-  }
+.container-fluid {
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
 
 /*Contact*/
 
-strong  {
-    font-weight: 500;
+strong {
+  font-weight: 500;
 }
 
-.contact    {
-    color: white;
-    font-family: 'Hind', sans-serif;
-    padding: 8% 18% 0% 18% ;
-    font-weight: 300;
+.contact {
+  color: white;
+  font-family: "Hind", sans-serif;
+  padding: 8% 18% 0% 18%;
+  font-weight: 300;
 }
-@media (max-width: 767px){
-    .contact  {
-        padding-top: 6rem;}
-}
-
-.contact  h1  {
-    text-align: center;
-    border-bottom-color: rgb(201, 198, 198);
-    border-bottom-width: 1px; 
-    border-bottom-style: solid;
-    padding-bottom: 1%;
+@media (max-width: 767px) {
+  .contact {
+    padding-top: 6rem;
+  }
 }
 
-.contact  p  {
-    text-align: center;
-    padding-top: 1%;
+.contact h1 {
+  text-align: center;
+  border-bottom-color: rgb(201, 198, 198);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 1%;
+}
+
+.contact p {
+  text-align: center;
+  padding-top: 1%;
 }
 </style>

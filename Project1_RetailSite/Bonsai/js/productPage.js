@@ -31,8 +31,7 @@ function fillCheckoutOptions(productData) {
     };
 }
 
-
 //Calls the addItemToBasket function when clicked.
-document.getElementById("cartButton").onclick = function() {
+document.getElementById("cartButton").onclick = function () {
     addItemToBasket()
 }
