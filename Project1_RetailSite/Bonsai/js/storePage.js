@@ -80,7 +80,7 @@ fillStorePageHTML();
 function fillStorePageHTML() {
     document.getElementById("storePageTabTitle").innerText = storeDisplay.storePageTitle;
     document.getElementById("storePageTitle").innerText = storeDisplay.storePageTitle;
-    document.getElementById("storePageDescription").innerText = storeDisplay.storePageDescription;
+    document.getElementById("storePageDescription").innerHTML = storeDisplay.storePageDescription;
 };
 
 /*FETCH PRODUCT DATA & CREATE PRODUCT CARDS*/
